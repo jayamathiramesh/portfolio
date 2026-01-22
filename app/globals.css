@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Color Palette - Digital Horizon + Architect's Mind */
+  --color-bg-deep: #0a0e1a;
+  --color-bg-charcoal: #1a1f2e;
+  --color-bg-darker: #080b15;
+
+  --color-accent-cyan: #00d9ff;
+  --color-accent-violet: #a78bfa;
+  --color-accent-glow: #ffffff;
+
+  /* Gradients */
+  --gradient-horizon: linear-gradient(180deg, #0a0e1a 0%, #080b15 100%);
+
+  /* Typography */
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing for scenes */
+  --scene-spacing: 100vh;
+
+  /* Motion Tokens */
+  --duration-scene-transition: 2000ms;
+  --duration-reveal: 1200ms;
+  --duration-hover: 400ms;
+  --easing-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-cinematic: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    @apply bg-[var(--color-bg-deep)] text-[var(--color-accent-glow)] font-[var(--font-display)];
+    overflow-x: hidden;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+  }
+
+  .text-glow-violet {
+    text-shadow: 0 0 20px rgba(167, 139, 250, 0.5);
+  }
+
+  .bg-gradient-horizon {
+    background: var(--gradient-horizon);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-cyan);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-violet);
 }
