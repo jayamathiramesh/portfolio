@@ -7,15 +7,31 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const SITE_URL = "https://jayamathi.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+
   title: "S R Jayamathi | Tech Founder | Intelligent Systems Builder",
-  description: "Building intelligent systems that turn complexity into clarity. Explore the architecture behind the vision.",
-  keywords: ["AI Systems", "Tech Founder", "Digital Infrastructure", "Automation", "Data Platforms"],
+  description:
+    "Tech founder building intelligent systems and platforms across AI, automation, and data. Exploring how ideas become scalable, real-world technology.",
+
+  keywords: [
+    "Tech Founder",
+    "AI Systems",
+    "Automation Platforms",
+    "Data Platforms",
+    "Digital Infrastructure",
+    "Systems Builder",
+    "Product Mindset",
+    "AI Founder Portfolio",
+  ],
+
   authors: [{ name: "S R Jayamathi" }],
-  openGraph: {
-    title: "S R Jayamathi | Tech Founder | Intelligent Systems Builder",
-    description: "An interactive journey through how I think, build, and shape technology.",
-    type: "website",
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -27,6 +43,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
+        {/* Minimal Structured Data for Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "S R Jayamathi",
+              url: SITE_URL,
+              jobTitle: "Tech Founder",
+              description:
+                "Tech founder building intelligent systems and platforms across AI, automation, and data.",
+              sameAs: [
+                "https://www.linkedin.com/in/jayamathi-ramesh-2993s/",
+              ],
+            }),
+          }}
+        />
+
         {children}
       </body>
     </html>
