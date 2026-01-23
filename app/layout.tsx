@@ -12,19 +12,19 @@ const SITE_URL = "https://jayamathi.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
-  title: "S R Jayamathi | Tech Founder | Intelligent Systems Builder",
+  title: "S R Jayamathi — Tech Founder & Intelligent Systems Builder",
   description:
-    "Tech founder building intelligent systems and platforms across AI, automation, and data. Exploring how ideas become scalable, real-world technology.",
+    "S R Jayamathi is a tech founder building intelligent systems and platforms across AI, automation, and data. Explore how Jayamathi designs and scales real-world technology.",
 
   keywords: [
-    "Tech Founder",
-    "AI Systems",
-    "Automation Platforms",
-    "Data Platforms",
-    "Digital Infrastructure",
-    "Systems Builder",
-    "Product Mindset",
-    "AI Founder Portfolio",
+    "S R Jayamathi",
+    "Jayamathi",
+    "Jayamathi Tech Founder",
+    "S R Jayamathi Portfolio",
+    "Jayamathi AI",
+    "Jayamathi Automation",
+    "Jayamathi Founder",
+    "Tech Founder Jayamathi",
   ],
 
   authors: [{ name: "S R Jayamathi" }],
@@ -51,16 +51,18 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "S R Jayamathi",
+              alternateName: "Jayamathi",
               url: SITE_URL,
               jobTitle: "Tech Founder",
               description:
-                "Tech founder building intelligent systems and platforms across AI, automation, and data.",
+                "S R Jayamathi is a tech founder building intelligent systems and platforms across AI, automation, and data.",
               sameAs: [
                 "https://www.linkedin.com/in/jayamathi-ramesh-2993s/",
               ],
             }),
           }}
         />
+
 
         {children}
       </body>
