@@ -1,5 +1,38 @@
 import { motion } from 'framer-motion';
+import FloatingGeometry from '../3d/FloatingGeometry';
+import AtmosphericFog from '../3d/AtmosphericFog';
+import GlowingGrid from '../3d/GlowingGrid';
 import { TRANSITION } from '@/lib/motion';
+
+export default function IntroScene() {
+    return (
+        <>
+            <AtmosphericFog color="#0d1020" near={6} far={18} />
+            <GlowingGrid position={[0, -2, 0]} color="#00d9ff" />
+
+            <FloatingGeometry
+                position={[4, 2, -5]}
+                geometry="torus"
+                size={0.6}
+                color="#7c3aed"
+                emissiveIntensity={0.5}
+                rotationSpeed={0.005}
+            />
+
+            <FloatingGeometry
+                position={[-4, -1, -4]}
+                geometry="octahedron"
+                size={0.8}
+                color="#00d9ff"
+                emissiveIntensity={0.4}
+                rotationSpeed={0.003}
+            />
+
+            <ambientLight intensity={0.5} />
+            <pointLight position={[10, 10, 10]} intensity={1} color="#a78bfa" />
+        </>
+    );
+}
 
 export function IntroOverlay() {
     return (
