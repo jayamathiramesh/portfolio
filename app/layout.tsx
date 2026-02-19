@@ -59,7 +59,7 @@ export default function RootLayout({
                 "Jayamathi Ramesh, also known as S R Jayamathi, is a tech founder building intelligent systems and platforms across AI, automation, and data.",
               sameAs: [
                 "https://www.linkedin.com/in/jayamathi-ramesh-2993s/",
-                "https://mud-slipper-649.notion.site/Jayamathi-s-Blog-2f24ae9979ef80a7b4e3c2362fbe540a?pvs=141",
+                "https://jayamathi.notion.site/Jayamathi-s-Blog-2f24ae9979ef80a7b4e3c2362fbe540a?pvs=74",
               ],
             }),
           }}
