@@ -227,7 +227,7 @@ export function ContactOverlay() {
                     </a>
 
                     <a
-                        href="https://mud-slipper-649.notion.site/Jayamathi-s-Blog-2f24ae9979ef80a7b4e3c2362fbe540a?pvs=141"
+                        href="https://jayamathi.notion.site/Jayamathi-s-Blog-2f24ae9979ef80a7b4e3c2362fbe540a?pvs=74"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white hover:text-[var(--color-accent-violet)] transition-colors text-lg inline-flex items-center gap-2 font-semibold bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10 hover:bg-black/40 ml-4"
