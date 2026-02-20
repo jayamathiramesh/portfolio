@@ -7,7 +7,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const SITE_URL = "https://jayamathi.vercel.app";
+const SITE_URL = "https://jayamathiramesh.site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
