@@ -107,7 +107,7 @@ export function ContactOverlay() {
 
     return (
         <div className="fixed inset-0 pointer-events-auto flex items-start justify-center z-10 overflow-y-auto pt-24 md:pt-32 pb-20">
-            <div className="max-w-2xl mx-auto px-6">
+            <div className="max-w-2xl mx-auto px-6 scene-content origin-top">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

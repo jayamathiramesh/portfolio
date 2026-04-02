@@ -86,13 +86,13 @@ export default function VisionScene() {
 
 export function VisionOverlay() {
     return (
-        <div className="fixed inset-0 pointer-events-auto flex items-start justify-center z-10 pt-20 md:pt-32 pb-24 overflow-y-auto">
-            <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="fixed inset-0 pointer-events-auto flex items-start justify-center z-10 pt-16 md:pt-24 pb-16 overflow-y-auto">
+            <div className="max-w-4xl mx-auto px-6 text-center scene-content origin-top">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={TRANSITION.reveal}
-                    className="text-3xl md:text-5xl font-bold mb-10 text-glow-violet"
+                    className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 lg:mb-10 text-glow-violet"
                 >
                     Building systems for a smarter, more automated future.
                 </motion.h2>
@@ -101,15 +101,15 @@ export function VisionOverlay() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ ...TRANSITION.reveal, delay: 0.3 }}
-                    className="text-lg text-gray-300 space-y-8"
+                    className="text-sm md:text-lg text-gray-300 space-y-6 lg:space-y-8"
                 >
-                    <p className="text-xl md:text-2xl font-light text-white/90">
+                    <p className="text-lg md:text-xl lg:text-2xl font-light text-white/90">
                         I care about problems where technology is not just a tool — but a strategic advantage.
                     </p>
 
-                    <div className="space-y-4 text-base flex flex-col items-center">
+                    <div className="space-y-3 lg:space-y-4 text-sm lg:text-base flex flex-col items-center">
                         <p className="text-gray-400">I focus on building systems that help people and organizations:</p>
-                        <ul className="list-none space-y-3 text-left inline-block">
+                        <ul className="list-none space-y-2 lg:space-y-3 text-left inline-block">
                             <li className="flex items-start gap-3">
                                 <span className="text-[var(--color-accent-cyan)] mt-1.5 h-1.5 w-1.5 rounded-full bg-current shrink-0 block"></span>
                                 <span>Make better decisions using intelligence, not intuition</span>
@@ -129,9 +129,9 @@ export function VisionOverlay() {
                         </ul>
                     </div>
 
-                    <div className="space-y-4 text-base pt-2 flex flex-col items-center">
+                    <div className="space-y-3 lg:space-y-4 text-sm lg:text-base pt-2 flex flex-col items-center">
                         <p className="text-gray-400">I believe the future belongs to platforms that are:</p>
-                        <ul className="list-none space-y-3 text-left inline-block min-w-[200px]">
+                        <ul className="list-none space-y-2 lg:space-y-3 text-left inline-block min-w-[200px]">
                             <li className="flex items-start gap-3">
                                 <span className="text-[var(--color-accent-violet)] mt-1.5 h-1.5 w-1.5 rounded-full bg-current shrink-0 block"></span>
                                 <span>AI-first</span>
@@ -151,7 +151,7 @@ export function VisionOverlay() {
                         </ul>
                     </div>
 
-                    <p className="text-sm text-[var(--color-accent-cyan)] pt-8 italic tracking-wide">
+                    <p className="text-xs lg:text-sm text-[var(--color-accent-cyan)] pt-4 lg:pt-8 italic tracking-wide">
                         My goal is to build digital infrastructure that compounds in value over time.
                     </p>
                 </motion.div>

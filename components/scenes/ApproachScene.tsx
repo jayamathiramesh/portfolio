@@ -66,12 +66,12 @@ export function ApproachOverlay() {
 
     return (
         <div className="fixed inset-0 pointer-events-none flex items-center justify-center z-10">
-            <div className="max-w-3xl mx-auto px-6">
+            <div className="max-w-3xl mx-auto px-6 scene-content">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={TRANSITION.reveal}
-                    className="text-4xl md:text-6xl font-bold mb-8 text-glow"
+                    className="text-3xl md:text-5xl font-bold mb-4 lg:mb-8 text-glow"
                 >
                     From vision to execution.
                 </motion.h2>
@@ -80,7 +80,7 @@ export function ApproachOverlay() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ ...TRANSITION.reveal, delay: 0.2 }}
-                    className="text-xl text-gray-300 mb-10"
+                    className="text-lg md:text-xl text-gray-300 mb-6 lg:mb-10"
                 >
                     I operate at the intersection of product, engineering, and strategy.
                 </motion.p>
@@ -89,19 +89,19 @@ export function ApproachOverlay() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ ...TRANSITION.reveal, delay: 0.4 }}
-                    className="mb-8"
+                    className="mb-6 lg:mb-8"
                 >
-                    <h3 className="text-lg text-[var(--color-accent-cyan)] mb-4 uppercase tracking-wider">
+                    <h3 className="text-base lg:text-lg text-[var(--color-accent-cyan)] mb-3 lg:mb-4 uppercase tracking-wider">
                         Core Principles
                     </h3>
-                    <ul className="space-y-3">
+                    <ul className="space-y-2 lg:space-y-3">
                         {principles.map((principle, index) => (
                             <motion.li
                                 key={principle}
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ ...TRANSITION.reveal, delay: 0.5 + index * 0.1 }}
-                                className="flex items-start text-base text-gray-300"
+                                className="flex items-start text-sm lg:text-base text-gray-300"
                             >
                                 <span className="text-[var(--color-accent-cyan)] mr-3">–</span>
                                 <span>{principle}</span>
@@ -114,7 +114,7 @@ export function ApproachOverlay() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ ...TRANSITION.reveal, delay: 1 }}
-                    className="space-y-3 text-base text-gray-400"
+                    className="space-y-1 lg:space-y-3 text-sm lg:text-base text-gray-400"
                 >
                     <p>I don't chase trends or features.</p>
                     <p>I design systems that survive growth.</p>
@@ -124,7 +124,7 @@ export function ApproachOverlay() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ ...TRANSITION.reveal, delay: 1.3 }}
-                    className="text-sm text-[var(--color-accent-violet)] mt-8 italic"
+                    className="text-xs lg:text-sm text-[var(--color-accent-violet)] mt-6 lg:mt-8 italic"
                 >
                     Building is easy. Building things that last is hard.
                 </motion.p>

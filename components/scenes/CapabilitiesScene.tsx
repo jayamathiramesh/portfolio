@@ -140,12 +140,12 @@ export function CapabilitiesOverlay() {
 
     return (
         <div className="fixed inset-0 pointer-events-none flex items-center justify-center z-10">
-            <div className="max-w-4xl mx-auto px-6">
+            <div className="max-w-4xl mx-auto px-6 scene-content">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={TRANSITION.reveal}
-                    className="text-4xl md:text-6xl font-bold mb-12 text-center text-glow"
+                    className="text-3xl md:text-5xl font-bold mb-6 lg:mb-12 text-center text-glow"
                 >
                     Systems, not just software.
                 </motion.h2>
@@ -154,24 +154,24 @@ export function CapabilitiesOverlay() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ ...TRANSITION.reveal, delay: 0.2 }}
-                    className="text-xl text-gray-300 mb-10 text-center"
+                    className="text-lg md:text-xl text-gray-300 mb-6 lg:mb-10 text-center"
                 >
                     I design and build intelligent digital systems across four core domains:
                 </motion.p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 mb-6 lg:mb-10">
                     {capabilities.map((capability, index) => (
                         <motion.div
                             key={capability.title}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ ...TRANSITION.reveal, delay: 0.3 + index * 0.15 }}
-                            className="bg-[var(--color-bg-charcoal)]/40 backdrop-blur-sm border border-[var(--color-accent-cyan)]/20 rounded-lg p-6"
+                            className="bg-[var(--color-bg-charcoal)]/40 backdrop-blur-sm border border-[var(--color-accent-cyan)]/20 rounded-lg p-4 lg:p-6"
                         >
-                            <h3 className="text-xl font-semibold mb-3 text-[var(--color-accent-cyan)]">
+                            <h3 className="text-lg lg:text-xl font-semibold mb-2 lg:mb-3 text-[var(--color-accent-cyan)]">
                                 {capability.title}
                             </h3>
-                            <p className="text-sm text-gray-400">{capability.description}</p>
+                            <p className="text-xs lg:text-sm text-gray-400">{capability.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -180,7 +180,7 @@ export function CapabilitiesOverlay() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ ...TRANSITION.reveal, delay: 1 }}
-                    className="text-sm text-[var(--color-accent-violet)] text-center italic"
+                    className="text-xs lg:text-sm text-[var(--color-accent-violet)] text-center italic"
                 >
                     Everything I build is designed to scale from prototype to production.
                 </motion.p>
